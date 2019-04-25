@@ -10,7 +10,8 @@ end
 def select_name_and_motto_of_char_with_longest_motto
   "SELECT characters.name, motto
   FROM characters
-  WHERE MAX(motto.length);"
+  ORDER BY motto.length
+  LIMIT 1;"
 end
 
 
